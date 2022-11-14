@@ -1,5 +1,8 @@
 package com.example.springjpa;
 
+import com.example.springjpa.models.Book;
+import com.example.springjpa.models.Library;
+import com.example.springjpa.repositories.LibraryRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -17,16 +20,10 @@ public class SpringjpaApplication {
 
         Book book = new Book(null,"Quijote",739,"Cervantes", 19.99);
 
-        library.getBooks().add(book);
-        library2.getBooks().add(book);
-
         repository.save(library);
-
-        System.out.println(repository.findAll());
 
         repository.save(library2);
 
-        System.out.println(repository.findAll());
 
     }
 

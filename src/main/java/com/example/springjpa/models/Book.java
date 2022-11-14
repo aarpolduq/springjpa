@@ -1,4 +1,4 @@
-package com.example.springjpa;
+package com.example.springjpa.models;
 
 import org.springframework.transaction.annotation.Transactional;
 
@@ -8,7 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-@Transactional
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
